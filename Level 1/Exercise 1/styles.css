@@ -1,0 +1,241 @@
+/* ============ Base ============ */
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: rgba(31, 41, 55, 0.12);
+  --accent: #2563eb;
+  --accent-2: #7c3aed;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+body.dark {
+  --bg: #0b1220;
+  --card: #0f1a2b;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --border: rgba(229, 231, 235, 0.14);
+  --accent: #60a5fa;
+  --accent-2: #a78bfa;
+  --shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ============ Layout ============ */
+.container {
+  width: min(960px, 92vw);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  gap: 12px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.brand-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+main {
+  padding: 22px 0 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+/* ============ Profile Section ============ */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.avatar-wrap {
+  flex: 0 0 auto;
+}
+
+.avatar {
+  width: 104px;
+  height: 104px;
+  object-fit: cover;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.name {
+  margin: 0;
+  font-size: clamp(22px, 4vw, 34px);
+  letter-spacing: -0.03em;
+}
+
+.bio {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Hover effects */
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.link:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.10);
+}
+
+.link:active {
+  transform: translateY(0);
+}
+
+/* ============ Skills ============ */
+.section-title {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.skills {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--card) 70%, var(--bg));
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ============ Footer ============ */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 18px 0 28px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.muted {
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 560px) {
+  .profile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .avatar {
+    width: 92px;
+    height: 92px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* ============ Button ============ */
+.btn {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 160ms ease, filter 160ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
