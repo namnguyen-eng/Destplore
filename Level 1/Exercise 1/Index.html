@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nam Nguyen | Profile</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <a class="brand" href="#">
+          <span class="brand-dot"></span>
+          <span>Nam Nguyen</span>
+        </a>
+
+        <button class="btn" id="themeBtn" type="button">
+          Toggle Dark Mode
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card profile">
+        <div class="avatar-wrap">
+          <img
+            class="avatar"
+            src="avatar.jpg"
+            alt="Avatar of Nam Nguyen"
+          />
+        </div>
+
+        <div class="profile-info">
+          <h1 class="name">Nam Nguyen</h1>
+          <p class="bio">
+            I am an 18-year-old first-year student at
+            <strong>Ursinus College</strong> in Pennsylvania, currently majoring
+            in <strong>Computer Science</strong>.
+          </p>
+
+          <div class="links">
+            <a
+              class="link"
+              href="https://github.com/namnguyen-eng"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 class="section-title">Skills</h2>
+        <ul class="skills">
+          <li class="skill">Java</li>
+          <li class="skill">JavaScript</li>
+          <li class="skill">C++</li>
+          <li class="skill">Python</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© <span id="year"></span> Nam Nguyen</p>
+        <p class="muted">Built with HTML & CSS</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+      document
+        .getElementById("themeBtn")
+        .addEventListener("click", () => {
+          document.body.classList.toggle("dark");
+        });
+    </script>
+  </body>
+</html>
