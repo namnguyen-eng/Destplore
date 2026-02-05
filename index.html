@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Destplore | Level 1</title>
+    <title>Destplore</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,11 +29,13 @@
         background: var(--bg);
         color: var(--text);
       }
-      .container { width: min(900px, 92vw); margin: 0 auto; padding: 26px 0 40px; }
-      .title { margin: 0; font-size: clamp(22px, 4vw, 34px); letter-spacing: -0.03em; }
+      .container { width: min(980px, 92vw); margin: 0 auto; padding: 26px 0 40px; }
+      .title { margin: 0; font-size: clamp(26px, 4vw, 38px); letter-spacing: -0.03em; }
       .subtitle { margin: 8px 0 18px; color: var(--muted); }
+
       .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
       @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+
       .card {
         background: var(--card);
         border: 1px solid var(--border);
@@ -42,11 +44,12 @@
         padding: 18px;
         text-decoration: none;
         color: var(--text);
-        transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+        transition: transform 160ms ease, border-color 160ms ease;
       }
       .card:hover { transform: translateY(-2px); border-color: rgba(37,99,235,.35); }
       .card h2 { margin: 0 0 6px; font-size: 18px; }
       .card p { margin: 0; color: var(--muted); line-height: 1.5; }
+
       .btn {
         display: inline-block;
         margin-top: 12px;
@@ -56,13 +59,14 @@
         border-radius: 12px;
         font-weight: 800;
       }
+
       footer { margin-top: 22px; color: var(--muted); }
     </style>
   </head>
 
   <body>
     <main class="container">
-      <h1 class="title">Destplore — Level 1</h1>
+      <h1 class="title">Destplore</h1>
       <p class="subtitle">Choose an exercise:</p>
 
       <section class="grid" aria-label="Exercises">
@@ -76,6 +80,12 @@
           <h2>Exercise 2: Product Card</h2>
           <p>UI component, hover effect, CSS Grid, responsive layout</p>
           <span class="btn">Open Exercise 2</span>
+        </a>
+
+        <a class="card" href="Level%201/Exercise%203/">
+          <h2>Exercise 3: To-Do List</h2>
+          <p>DOM, events, Enter key, localStorage</p>
+          <span class="btn">Open Exercise 3</span>
         </a>
       </section>
 
