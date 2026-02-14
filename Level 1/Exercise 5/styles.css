@@ -147,3 +147,10 @@ main { padding: 22px 0 36px; }
   .input-row { flex-direction: column; }
   .toggle { padding: 10px 12px; }
 }
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0 16px;
+}
