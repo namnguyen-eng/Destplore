@@ -239,3 +239,10 @@ main {
 .btn:active {
   transform: translateY(0);
 }
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0 16px;
+}
