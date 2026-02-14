@@ -199,3 +199,10 @@ main {
   .row { flex-direction: column; }
   .btn { width: 100%; }
 }
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0 16px;
+}
