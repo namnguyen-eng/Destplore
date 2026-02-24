@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 6 | Tabs</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <h1 class="title">Exercise 6: Tabs</h1>
+
+        <!-- Optional nav -->
+        <nav class="nav-links" aria-label="Navigation">
+          <a class="link" href="../../">Home</a>
+          <a class="link" href="../Exercise%205/">Exercise 5</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2 class="section-title">Tabs Component</h2>
+        <p class="muted">Click a tab to switch content. Only one tab is active at a time.</p>
+
+        <!-- Tabs -->
+        <div class="tabs" role="tablist" aria-label="Sample tabs">
+          <button class="tab active" type="button" role="tab" aria-selected="true"
+            data-tab="about">
+            About
+          </button>
+
+          <button class="tab" type="button" role="tab" aria-selected="false"
+            data-tab="projects">
+            Projects
+          </button>
+
+          <button class="tab" type="button" role="tab" aria-selected="false"
+            data-tab="contact">
+            Contact
+          </button>
+        </div>
+
+        <!-- Panels -->
+        <div class="panels">
+          <div class="panel active" role="tabpanel" data-panel="about">
+            <h3 class="panel-title">About</h3>
+            <p class="panel-text">
+              This is a simple tabs component built with data attributes and active state management.
+              It’s a common UI pattern in real apps.
+            </p>
+          </div>
+
+          <div class="panel" role="tabpanel" data-panel="projects">
+            <h3 class="panel-title">Projects</h3>
+            <ul class="panel-list">
+              <li>Portfolio website</li>
+              <li>To-do app with localStorage</li>
+              <li>Modal + form validation components</li>
+            </ul>
+          </div>
+
+          <div class="panel" role="tabpanel" data-panel="contact">
+            <h3 class="panel-title">Contact</h3>
+            <p class="panel-text">
+              GitHub:
+              <a class="inline-link" href="https://github.com/namnguyen-eng" target="_blank" rel="noreferrer">
+                namnguyen-eng
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p class="muted">Nam Nguyen — Level 1 / Exercise 6</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
