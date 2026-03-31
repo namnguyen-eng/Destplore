@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 8 | Product Listing</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <div>
+          <h1 class="title">Exercise 8: Product Listing</h1>
+          <p class="subtitle">Simple e-commerce style product page</p>
+        </div>
+
+        <div class="cart-badge">
+          Cart: <span id="cartCount">0</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="nav-links">
+        <a class="link" href="../../">← Home</a>
+        <a class="link" href="../Exercise%201/">Ex 1</a>
+        <a class="link" href="../Exercise%202/">Ex 2</a>
+        <a class="link" href="../Exercise%203/">Ex 3</a>
+        <a class="link" href="../Exercise%204/">Ex 4</a>
+        <a class="link" href="../Exercise%205/">Ex 5</a>
+        <a class="link" href="../Exercise%206/">Ex 6</a>
+        <a class="link" href="../Exercise%207/">Ex 7</a>
+        <a class="link" href="../Exercise%208/">Ex 8</a>
+      </div>
+
+      <section class="controls card">
+        <div class="control-group">
+          <label class="label" for="priceFilter">Filter by price</label>
+          <select id="priceFilter" class="select">
+            <option value="all">All prices</option>
+            <option value="0-50">$0 - $50</option>
+            <option value="51-100">$51 - $100</option>
+            <option value="101-200">$101 - $200</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label class="label" for="sortSelect">Sort by price</label>
+          <select id="sortSelect" class="select">
+            <option value="default">Default</option>
+            <option value="asc">Low to High</option>
+            <option value="desc">High to Low</option>
+          </select>
+        </div>
+      </section>
+
+      <section>
+        <div id="productGrid" class="product-grid"></div>
+        <p id="emptyState" class="empty hidden">No products match this filter.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>Nam Nguyen — Level 1 / Exercise 8</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
